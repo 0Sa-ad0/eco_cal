@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.table-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.add-row {
+    text-align: center;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 20px;
+}
+
+.add-row:hover {
+    color: #0056b3;
+}
+
+select, input[type="text"], input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.dark-mode-toggle {
+    margin: 20px;
+    text-align: right;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .table-container {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+body.dark-mode th {
+    background-color: #222;
+}
+
+body.dark-mode tbody tr:nth-child(even) {
+    background-color: #555;
+}
+
+body.dark-mode .add-row {
+    color: #f4f4f4;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"],
+body.dark-mode input[type="time"],
+body.dark-mode select {
+    background-color: #666;
+    color: #f4f4f4;
+    border: 1px solid #888;
+}
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.table-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.add-row {
+    text-align: center;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 20px;
+}
+
+.add-row:hover {
+    color: #0056b3;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+} */

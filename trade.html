@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Table</title>
+    <link rel="stylesheet" href="trade.css">
+</head>
+<header><center>
+    <h1>ECONOMIC CALENDAR</h1></center>
+</header>
+<body>
+    <div class="dark-mode-toggle">
+        <label>
+            <input type="checkbox" id="dark-mode-switch">
+            Dark Mode
+        </label>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date (Day)</th>
+                    <th>Time (AM/PM)</th>
+                    <th>Currency</th>
+                    <th>Add Row</th>
+                </tr>
+            </thead>
+            <tbody id="currency-table-body">
+                <!-- JavaScript will populate this section -->
+            </tbody>
+        </table>
+    </div>
+    <script src="trade.js"></script>
+</body>
+</html>
