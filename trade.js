@@ -2,10 +2,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const tableBody = document.getElementById('currency-table-body');
     const darkModeSwitch = document.getElementById('dark-mode-switch');
 
+    // Load table data from localStorage
+    function loadTableData() {
+        const savedData = localStorage.getItem('currencyTableData');
+        if (savedData) {
+            JSON.parse(savedData).forEach(row => addRow(row.date, row.time, row.currency));
+        } else {
+            addRow();  // Add an initial empty row if no data is saved
+        }
+    }
+    
     // Dark mode toggle
     darkModeSwitch.addEventListener('change', function() {
         document.body.classList.toggle('dark-mode', darkModeSwitch.checked);
     });
+
+    // Load dark mode preference
+    function loadDarkModePreference() {
+        const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+        document.body.classList.toggle('dark-mode', darkModeEnabled);
+        darkModeSwitch.checked = darkModeEnabled;
+    }
+    
     function createDateDropdown() {
         const container = document.createElement('div');
         const input = document.createElement('input');
@@ -70,4 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add an initial row
     addRow();
+
+    // Load data on page load
+    loadTableData();
+    loadDarkModePreference();
 });
